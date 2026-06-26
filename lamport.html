@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SimuSync | Algoritmo de Lamport</title>
+
+    <link rel="stylesheet" href="lamport.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>🛒 Algoritmo de la Panadería de Lamport</h1>
+
+        <p>
+            Simulación del acceso a la sección crítica utilizando el algoritmo de Lamport.
+        </p>
+
+        <div class="panel">
+
+            <label>
+
+                Cantidad de procesos
+
+            </label>
+
+            <select id="cantidadProcesos">
+
+                <option value="2">2 Procesos</option>
+                <option value="3">3 Procesos</option>
+                <option value="4">4 Procesos</option>
+                <option value="5" selected>5 Procesos</option>
+                <option value="6">6 Procesos</option>
+
+            </select>
+
+            <button id="btnIniciar">
+
+                ▶ Iniciar
+
+            </button>
+
+            <button id="btnPausar">
+
+                ⏸ Pausar
+
+            </button>
+
+            <button id="btnReiniciar">
+
+                🔄 Reiniciar
+
+            </button>
+
+        </div>
+
+        <hr>
+
+        <h2>Estado de los Procesos</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Proceso</th>
+                    <th>Ticket</th>
+                    <th>Estado</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaProcesos">
+
+            </tbody>
+
+        </table>
+
+        <br>
+
+        <h2>Sección Crítica</h2>
+
+        <div id="seccionCritica">
+
+            Ningún proceso utilizando el recurso.
+
+        </div>
+
+        <br>
+
+        <h2>Registro de Eventos</h2>
+
+        <div id="registro">
+
+            <p>Esperando iniciar simulación...</p>
+
+        </div>
+
+        <br>
+
+        <button onclick="location.href='dashboard.html'">
+
+            ← Volver al Dashboard
+
+        </button>
+
+    </div>
+
+    <script src="lamport.js"></script>
+
+</body>
+
+</html>

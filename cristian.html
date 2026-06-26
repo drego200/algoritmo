@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SimuSync | Algoritmo de Cristian</title>
+
+    <link rel="stylesheet" href="cristian.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header>
+
+            <h1>🕒 Algoritmo de Cristian</h1>
+
+            <p>
+                Simulación de sincronización de relojes entre un servidor y varios clientes.
+            </p>
+
+        </header>
+
+        <hr>
+
+        <section class="panel-control">
+
+            <div>
+
+                <label>
+
+                    Cantidad de Clientes
+
+                </label>
+
+                <select id="cantidadClientes">
+
+                    <option value="2">2 Clientes</option>
+                    <option value="3" selected>3 Clientes</option>
+                    <option value="4">4 Clientes</option>
+                    <option value="5">5 Clientes</option>
+
+                </select>
+
+            </div>
+
+            <div class="botones">
+
+                <button id="btnCrear">
+
+                    Crear Clientes
+
+                </button>
+
+                <button id="btnSincronizar">
+
+                    Sincronizar
+
+                </button>
+
+                <button id="btnReiniciar">
+
+                    Reiniciar
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>🖥️ Servidor de Tiempo</h2>
+
+            <div class="servidor">
+
+                <div class="card-servidor">
+
+                    <h3>Servidor</h3>
+
+                    <div id="horaServidor" class="reloj">
+
+                        00:00:00
+
+                    </div>
+
+                    <span class="estado-servidor">
+
+                        Esperando solicitudes...
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>💻 Clientes</h2>
+
+            <div id="clientes" class="clientes">
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>📋 Registro de Eventos</h2>
+
+            <div id="registro" class="registro">
+
+                Esperando iniciar simulación...
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>📚 ¿Cómo funciona el Algoritmo de Cristian?</h2>
+
+            <ol class="explicacion">
+
+                <li>El cliente solicita la hora al servidor.</li>
+
+                <li>El servidor responde con su hora actual.</li>
+
+                <li>El cliente calcula el tiempo de ida y vuelta (RTT).</li>
+
+                <li>El cliente estima el retardo de la red.</li>
+
+                <li>El cliente ajusta su reloj utilizando la hora recibida.</li>
+
+            </ol>
+
+        </section>
+
+        <div class="volver">
+
+            <button onclick="location.href='dashboard.html'">
+
+                ← Volver al Dashboard
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="cristian.js"></script>
+
+</body>
+
+</html>
